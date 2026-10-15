@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-10-15 16:30:06.196582+00:00",
+  "paper_trading_only": true,
+  "model_fitted_through": "2026-09-15 19:55:00+00:00",
+  "policy_selected_through": "2026-10-06 19:55:00+00:00",
+  "positions_assumption": "All instruments flat; no positions supplied",
+  "probabilities_describe": "Future raw price-return categories, not action probabilities or guaranteed returns",
+  "policy": {
+    "min_favourable_probability": 1.01,
+    "min_expected_net_bps": 0.0
+  },
+  "recommendations": [
+    {
+      "symbol": "SPY",
+      "bar_started_at": "2026-10-15 16:25:00+00:00",
+      "signal_available_at": "2026-10-15 16:30:00+00:00",
+      "data_age_seconds": 6.196582,
+      "planned_entry_at": "2026-10-15 16:35:00+00:00",
+      "planned_exit_at": "2026-10-15 16:50:00+00:00",
+      "entry_deadline_exclusive": "2026-10-15 16:35:00+00:00",
+      "current_weight": 0.0,
+      "suggested_additional_weight": 0.0,
+      "action": "WAIT",
+      "reason": "The learned entry thresholds are not met.",
+      "outcome_probabilities": {
+        "unfavourable": 0.2687499228712284,
+        "neutral": 0.3949321296866726,
+        "favourable": 0.3363179474420991
+      },
+      "estimated_net_return_bps": -3.350991096651157
+    },
+    {
+      "symbol": "QQQ",
+      "bar_started_at": "2026-10-15 16:25:00+00:00",
+      "signal_available_at": "2026-10-15 16:30:00+00:00",
+      "data_age_seconds": 6.196582,
+      "planned_entry_at": "2026-10-15 16:35:00+00:00",
+      "planned_exit_at": "2026-10-15 16:50:00+00:00",
+      "entry_deadline_exclusive": "2026-10-15 16:35:00+00:00",
+      "current_weight": 0.0,
+      "suggested_additional_weight": 0.0,
+      "action": "WAIT",
+      "reason": "The learned entry thresholds are not met.",
+      "outcome_probabilities": {
+        "unfavourable": 0.2947244393493361,
+        "neutral": 0.243202577442377,
+        "favourable": 0.4620729832082869
+      },
+      "estimated_net_return_bps": -2.3109359433837184
+    },
+    {
+      "symbol": "IWM",
+      "bar_started_at": "2026-10-15 16:25:00+00:00",
+      "signal_available_at": "2026-10-15 16:30:00+00:00",
+      "data_age_seconds": 6.196582,
+      "planned_entry_at": "2026-10-15 16:35:00+00:00",
+      "planned_exit_at": "2026-10-15 16:50:00+00:00",
+      "entry_deadline_exclusive": "2026-10-15 16:35:00+00:00",
+      "current_weight": 0.0,
+      "suggested_additional_weight": 0.0,
+      "action": "WAIT",
+      "reason": "The learned entry thresholds are not met.",
+      "outcome_probabilities": {
+        "unfavourable": 0.22620475032802034,
+        "neutral": 0.37817506651689214,
+        "favourable": 0.3956201831550875
+      },
+      "estimated_net_return_bps": -2.315311382067309
+    }
+  ],
+  "historical_replay": false
+}

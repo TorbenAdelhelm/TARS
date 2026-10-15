@@ -1,0 +1,167 @@
+{
+  "purpose": "Research and paper-trading recommendations; no order execution",
+  "config": {
+    "symbols": [
+      "SPY",
+      "QQQ",
+      "IWM"
+    ],
+    "interval_minutes": 5,
+    "history_days": 59,
+    "holding_bars": 3,
+    "entry_delay_bars": 1,
+    "cost_bps_per_side": 2.0,
+    "neutral_buffer_bps": 1.0,
+    "max_position_weight": 0.1,
+    "max_gross_weight": 0.3,
+    "min_validation_trades": 8,
+    "seed": 42
+  },
+  "data": {
+    "source": "Yahoo via yfinance",
+    "downloaded_at": "2026-10-15 16:28:36.198043+00:00",
+    "symbols": {
+      "SPY": {
+        "bars": 3311,
+        "first_bar": "2026-08-17 13:30:00+00:00",
+        "last_completed_bar": "2026-10-15 16:20:00+00:00",
+        "sessions": 43
+      },
+      "QQQ": {
+        "bars": 3311,
+        "first_bar": "2026-08-17 13:30:00+00:00",
+        "last_completed_bar": "2026-10-15 16:20:00+00:00",
+        "sessions": 43
+      },
+      "IWM": {
+        "bars": 3311,
+        "first_bar": "2026-08-17 13:30:00+00:00",
+        "last_completed_bar": "2026-10-15 16:20:00+00:00",
+        "sessions": 43
+      }
+    }
+  },
+  "chronological_splits": {
+    "fit": {
+      "first_session": "2026-08-17",
+      "last_session": "2026-09-15",
+      "sessions": 21,
+      "examples": 3843
+    },
+    "calibration": {
+      "first_session": "2026-09-16",
+      "last_session": "2026-09-28",
+      "sessions": 9,
+      "examples": 1647
+    },
+    "policy_selection": {
+      "first_session": "2026-09-29",
+      "last_session": "2026-10-06",
+      "sessions": 6,
+      "examples": 1098
+    },
+    "test": {
+      "first_session": "2026-10-07",
+      "last_session": "2026-10-15",
+      "sessions": 7,
+      "examples": 1152
+    }
+  },
+  "label_hurdle_bps": 5.000800160031127,
+  "temperature": 1.6994325685639022,
+  "class_gross_return_means_bps": [
+    -10.10478408432724,
+    -0.15041004700937413,
+    10.179445159948987
+  ],
+  "selected_policy": {
+    "min_favourable_probability": 1.01,
+    "min_expected_net_bps": 0.0
+  },
+  "cash_only_policy_selected": true,
+  "validation_backtest": {
+    "total_return": 0.0,
+    "max_drawdown_bar_open_marks": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "mean_trade_net_bps": null,
+    "cash_baseline_return": 0.0,
+    "peak_observed_gross_weight": 0.0,
+    "peak_observed_position_weight": 0.0,
+    "sessions": 6,
+    "passive_same_initial_allocation_return": 0.004491717393637162
+  },
+  "untouched_test_backtest": {
+    "total_return": 0.0,
+    "max_drawdown_bar_open_marks": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "mean_trade_net_bps": null,
+    "cash_baseline_return": 0.0,
+    "peak_observed_gross_weight": 0.0,
+    "peak_observed_position_weight": 0.0,
+    "sessions": 7,
+    "passive_same_initial_allocation_return": -0.0069504139473706705
+  },
+  "untouched_test_probability_metrics": {
+    "log_loss": 1.0227324028429183,
+    "training_prior_log_loss": 1.0391093824409892,
+    "multiclass_brier_sum": 0.613435053933264,
+    "training_prior_brier_sum": 0.62465216859037,
+    "accuracy": 0.4869791666666667,
+    "favourable_reliability_bins": [
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 207,
+        "mean_predicted_favourable": 0.17287328076137348,
+        "observed_favourable_fraction": 0.14492753623188406
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "count": 535,
+        "mean_predicted_favourable": 0.24910740285793415,
+        "observed_favourable_fraction": 0.2261682242990654
+      },
+      {
+        "lower": 0.30000000000000004,
+        "upper": 0.4,
+        "count": 343,
+        "mean_predicted_favourable": 0.3399987480013826,
+        "observed_favourable_fraction": 0.31486880466472306
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 61,
+        "mean_predicted_favourable": 0.43356621109797194,
+        "observed_favourable_fraction": 0.19672131147540983
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 6,
+        "mean_predicted_favourable": 0.5266336684886673,
+        "observed_favourable_fraction": 0.6666666666666666
+      }
+    ]
+  },
+  "policy_candidates_tried": 21,
+  "limitations": [
+    "Recent Yahoo intraday history is short and may be delayed or revised.",
+    "Costs are assumptions; there are no bid/ask quotes or realistic queue/fill models.",
+    "Probabilities, class return means, and validation-selected thresholds may not generalize.",
+    "Bar-open drawdown misses movements within bars; market exposure can drift above entry caps.",
+    "Overlapping labels and shared market exposure mean rows/trades are not independent.",
+    "This is a single chronological holdout, not a walk-forward profitability study."
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "yfinance": "1.7.0",
+    "pandas-market-calendars": "5.5.0"
+  }
+}
